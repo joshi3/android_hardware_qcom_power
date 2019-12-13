@@ -13,11 +13,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifeq ($(call my-dir),$(call project-path-for,qcom-power))
+
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(call is-vendor-board-platform,QCOM),true)
+
 
 include $(CLEAR_VARS)
 
@@ -100,9 +100,9 @@ ifeq ($(call is-board-platform-in-list,msm8998 apq8098_latv), true)
 LOCAL_SRC_FILES += power-8998.c
 endif
 
-ifeq ($(call is-board-platform-in-list,sdm660), true)
+
 LOCAL_SRC_FILES += power-660.c
-endif
+
 
 ifeq ($(call is-board-platform-in-list,sdm845), true)
 LOCAL_SRC_FILES += power-845.c
@@ -176,6 +176,6 @@ LOCAL_VENDOR_MODULE := true
 LOCAL_HEADER_LIBRARIES := libhardware_headers
 include $(BUILD_EXECUTABLE)
 
-endif
 
-endif
+
+
